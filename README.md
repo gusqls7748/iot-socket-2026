@@ -127,3 +127,37 @@ yes를 누르면 사진과 같이 ip주소를 확인 가능하다.
 - 전화기(소켓) 번호표를 받고, 상대방 전화번호(IP)를 통신 규격에 맞게 변환해서 가방(구조체)에 잘 담는 과정
 
 ![alt text](image-11.png)
+
+![alt text](image-12.png)
+
+## 3일차
+
+- puppy 다운
+
+- https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
+
+
+- 1. 서버(Server): 대화를 기다리는 "가게 주인"
+서버 코드에서 가장 중요한 흐름은 이 4가지입니다.
+- socket(): 전화기를 산다.
+- bind(): 가게 전화번호(IP, Port)를 등록한다.
+- listen(): 손님(클라이언트)의 전화가 오기를 기다린다.
+- accept(): 벨이 울리면 전화를 받는다. (이때 실제 대화를 나눌 **client_fd**가 새로 생겨요!)
+recv & send: 손님이 한 말을 듣고(recv), 똑같이 대답한다(send).
+- 2. 클라이언트(Client): 전화를 거는 "손님"
+클라이언트는 서버보다 훨씬 단순합니다.
+- socket(): 내 휴대폰을 준비한다.
+- connect(): 가게 주소와 전화번호를 누르고 연결이 될 때까지 기다린다.
+- send & recv: 내가 먼저 말을 걸고(send), 주인의 대답을 듣는다(recv).
+
+- 서버를 먼저 작동하고 클라이언트가 작동
+
+![alt text](image-13.png)
+
+
+server 서버 받아서 계산기 하는거임
+![alt text](image-14.png)
+
+- ip 공유기 해서 하는법
+![alt text](image-15.png)
+
